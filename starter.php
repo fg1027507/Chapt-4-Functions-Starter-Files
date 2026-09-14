@@ -1,3 +1,13 @@
+<?php
+    include "function.php";
+    $futureDate = null;
+
+if (($_GET)) {
+    echo($_GET['numDays']);
+    $futureDate = calculateFutureDate($_GET['numDays']);
+    echo " Future: $futureDate"; //for troubleshooting
+}   
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,8 +24,30 @@
 </head>
 
 <body>
+    <?php include "nav.php";?>
     <main class="container mt-4">
         <h1>Date Calculator</h1>
+        <?php include "form.php";?>
+           <main class="container mt-4">
+        <h1>Date Calculator</h1>
+        <?php
+
+        include ("form.php");
+        ?>
+         
+
+    </main>
+        <h2>
+            <?php
+            if (isset($_GET['numDays'])) {
+                echo $futureDate;
+                echo("here");
+            } else {
+                todaysDate();
+                echo ("there");
+            }
+            ?>
+        </h2>
     </main>
 </body>
 

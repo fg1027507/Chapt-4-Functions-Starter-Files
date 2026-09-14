@@ -13,8 +13,9 @@
         $futureTimeStamp = strtotime("+$daysToAdd days", $timeStamp);
         // echo ($futureTimeStamp);
         $futureDate = date("Y-m-d D", $futureTimeStamp);
-        echo ("The date $daysToAdd days from now is: " . $futureDate);
+        // echo ("The date $daysToAdd days from now is: " . $futureDate);
+        return $futureDate;
     }
-    calculateFutureDate(5);
+    // calculateFutureDate(5);
 ?>
 
